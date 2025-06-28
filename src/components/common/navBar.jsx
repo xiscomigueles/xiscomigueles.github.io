@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
+import LanguageSwitcher from "../../components/LanguageSwithcer"; 
+import LanguageContext from "../../LanguageContext";
+import translations from "../../data/translations";
 
 const NavBar = (props) => {
 	const { active } = props;
+
+	const { language } = useContext(LanguageContext);
+
+	const [INFO, setINFO] = useState(translations[language]);
+
+	useEffect(() => {
+		setINFO(translations[language]);
+	}, [language]);
 
 	return (
 		<React.Fragment>
@@ -19,7 +30,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/">Home</Link>
+								<Link to="/">{INFO.nav_bar.home}</Link>
 							</li>
 							<li
 								className={
@@ -28,7 +39,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/about">About</Link>
+								<Link to="/about">{INFO.nav_bar.about}</Link>
 							</li>
 							<li
 								className={
@@ -37,16 +48,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/projects">Projects</Link>
-							</li>
-							<li
-								className={
-									active === "articles"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/articles">Articles</Link>
+								<Link to="/projects">{INFO.nav_bar.projects}</Link>
 							</li>
 							<li
 								className={
@@ -55,7 +57,10 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/contact">Contact</Link>
+								<Link to="/contact">{INFO.nav_bar.contact}</Link>
+							</li>
+							<li className="nav-item language-switcher-item"> 
+								<LanguageSwitcher />
 							</li>
 						</ul>
 					</div>

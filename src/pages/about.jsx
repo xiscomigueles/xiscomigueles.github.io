@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import NavBar from "../components/common/navBar";
@@ -6,8 +6,14 @@ import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
 
-import INFO from "../data/user";
+import LanguageContext from "../LanguageContext";
+import translations from "../data/translations";
+import Studies from "../components/homepage/studies";
+import OtherStudies from "../components/homepage/otherStudies";
+
+
 import SEO from "../data/seo";
+
 
 import "./styles/about.css";
 
@@ -15,6 +21,14 @@ const About = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	const { language } = useContext(LanguageContext);
+
+	const [INFO, setINFO] = useState(translations[language]);
+
+	useEffect(() => {
+		setINFO(translations[language]);
+	}, [language]);
 
 	const currentSEO = SEO.find((item) => item.page === "about");
 
@@ -46,7 +60,18 @@ const About = () => {
 								</div>
 
 								<div className="subtitle about-subtitle">
-									{INFO.about.description}
+									{INFO.about.description
+										.split("\n")
+										.map((line, index) => (
+											<p key={index}>{line}</p>
+										))}
+								</div>
+
+								<div className="homepage-studies">
+									<Studies />
+								</div>
+								<div className="homepage-studies">
+									<OtherStudies />
 								</div>
 							</div>
 

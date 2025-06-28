@@ -1,43 +1,50 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../common/card";
 
-import "./styles/works.css";
+import "./styles/works.css"
+
+
+import LanguageContext from "../../LanguageContext";
+import translations from "../../data/translations";
+
 
 const Works = () => {
+	
+	const { language } = useContext(LanguageContext);
+
+	const [INFO, setINFO] = useState(translations[language]);
+
+
+		useEffect(() => {
+			setINFO(translations[language]); 
+		}, [language]); 
+
 	return (
-		<div className="works">
+		<div className="work-list">
 			<Card
 				icon={faBriefcase}
-				title="Work"
+				title={INFO.card_headers.works}
 				body={
-					<div className="works-body">
-						<div className="work">
+					<div className="work-body">
+						{INFO.work && INFO.work.map(
+							(work,id) => (
+							<div className="work" onClick={() => window.open(work.url, '_blank')}>
 							<img
-								src="./facebook.png"
-								alt="facebook"
+								height={30}
+								src={work.logo}
+								alt={`${id}-study`}
 								className="work-image"
 							/>
-							<div className="work-title">Facebook</div>
+							<div className="work-title">{work.title}</div>
 							<div className="work-subtitle">
-								Software Engineer
+							{work.description}
 							</div>
-							<div className="work-duration">2019 - Present</div>
+							<div className="work-duration">{work.timeframe}</div>
 						</div>
-
-						<div className="work">
-							<img
-								src="./twitter.png"
-								alt="twitter"
-								className="work-image"
-							/>
-							<div className="work-title">Twitter</div>
-							<div className="work-subtitle">
-								Software Engineer
-							</div>
-							<div className="work-duration">2019 - Present</div>
-						</div>
+							)
+						)}
 					</div>
 				}
 			/>

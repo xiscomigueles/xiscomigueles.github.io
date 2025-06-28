@@ -93,6 +93,12 @@
 	padding-top: 30px;
 }
 
+
+.homepage-studies, .homepage-work  {
+	flex-basis: 600px;
+	padding-top: 30px;
+}
+
 @media (max-width: 1024px) {
 	.homepage-first-area {
 		flex-direction: column;
