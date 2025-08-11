@@ -1,49 +1,62 @@
-@import "../../../data/styles.css";
-
 .homepage-article {
 	width: 90%;
-	mix-blend-mode: normal;
 	border-radius: 20px;
-	opacity: 0.8;
+	background-color: #fff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
 }
 
 .homepage-article:hover {
-	background: #fafafa;
-	opacity: 1;
-	transition: background-color 0.3s ease-in-out;
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	background: linear-gradient(135deg, #f5f7fa, #e3ebf6);
 }
 
 .homepage-article-content {
 	padding: 30px;
+	display: flex;
+	flex-direction: column;
 }
 
 .homepage-article-date {
-	opacity: 1;
 	color: var(--tertiary-color);
 	font-size: 12px;
 	margin-bottom: 1em;
 }
 
-.homepage-article-title {
-	opacity: 1;
-	color: var(--primary-color);
-	font-size: 16px;
+.homepage-article-title-with-logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 	margin-bottom: 1em;
+}
+
+.homepage-article-logo {
+	width: 30px;
+	height: 30px;
+	border-radius: 8px;
+	object-fit: cover;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-article-title {
+	color: var(--primary-color);
+	font-size: 18px;
 	font-weight: 700;
 }
 
 .homepage-article-description {
-	opacity: 1;
 	color: var(--secondary-color);
-	font-size: 12px;
-	line-height: 1.5;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-top: 0.5em;
 }
 
 .homepage-article-link {
-	opacity: 1;
-	padding-top: 20px;
-	font-size: 15px;
-	font-weight: 700;
+	margin-top: 1em;
+	font-size: 14px;
+	font-weight: 600;
 }
 
 .homepage-article-link a {
@@ -54,5 +67,9 @@
 @media (max-width: 600px) {
 	.homepage-article {
 		width: 100%;
+	}
+	.homepage-article-title-with-logo {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }

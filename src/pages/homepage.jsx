@@ -4,12 +4,13 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Article from "../components/homepage/article";
-import AllProjects from "../components/projects/allProjects";
+import Project from "../components/projects/project";
 
 import LanguageContext from "../LanguageContext";
 import translations from "../data/translations";
@@ -18,7 +19,6 @@ import myArticles from "../data/articles";
 
 import Card from "../components/common/card";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-
 
 import "./styles/homepage.css";
 
@@ -154,38 +154,81 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
-							<AllProjects />
+							<div className="all-projects-container">
+								{INFO.projects
+									.filter((project) =>
+										[
+											"FoodCheck",
+											"Gus Gus",
+											"Dwarf",
+										].includes(project.title)
+									)
+									.map((project, index) => (
+										<div
+											className="all-projects-project"
+											key={index}
+										>
+											<Project
+												logo={project.logo}
+												title={project.title}
+												description={
+													project.description
+												}
+												linkText={project.linkText}
+												link={project.link}
+											/>
+										</div>
+									))}
+							</div>
+						</div>
+						<div className="view-all-projects-button">
+							<Link to="/projects">
+								{INFO.nav_bar.MoreProjects}
+							</Link>
 						</div>
 
 						<div className="homepage-after-title">
 							<Card
 								icon={faBriefcase}
 								title={INFO.card_headers.articles}
+								bodyStyle={{ paddingTop: 20 }}
 								body={
 									<div className="homepage-articles">
-										{myArticles.map((article, index) => (
-											<div
-												className="homepage-article"
-												key={(index + 1).toString()}
-											>
-												<Article
-													date={article().date}
-													title={article().title}
-													description={
-														article().description
-													}
-													link={
-														"/article/" +
-														(index + 1)
-													}
-												/>
-											</div>
-										))}
+										{myArticles.map((article, index) => {
+											const path = `/article/${
+												index + 1
+											}`;
+											return (
+												<Link
+													to={path}
+													key={(index + 1).toString()}
+													style={{ textDecoration: "none", color: "inherit" }}
+												>
+													<div className="homepage-article">
+														<Article
+															date={
+																article().date
+															}
+															title={
+																article().title
+															}
+															description={
+																article()
+																	.description
+															}
+															link={path}
+															logo={
+																article().logo
+															}
+														/>
+													</div>
+												</Link>
+											);
+										})}
 									</div>
 								}
 							/>
 						</div>
-
 						<div className="page-footer">
 							<Footer />
 						</div>

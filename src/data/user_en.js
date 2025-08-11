@@ -5,6 +5,7 @@ const INFO = {
 		about:"About",
 		projects:"Projects",
 		contact:"Contact",
+		MoreProjects: "Ver todos los proyectos en Ingles -->",
 		based_on: "Based on © 2023 Tharindu.dev. All rights reserved."
 	},
 

@@ -1,35 +1,37 @@
 const INFO = {
-
 	nav_bar: {
 		home: "Inicio",
-		about:"Sobre mi",
-		projects:"Proyectos",
-		contact:"Contacto",
-		based_on: "Basado en © 2023 Tharindu.dev. Todos los derechos reservados."
+		about: "Sobre mi",
+		projects: "Proyectos",
+		contact: "Contacto",
+		MoreProjects: "Ver todos los proyectos -->",
+		based_on:
+			"Basado en © 2023 Tharindu.dev. Todos los derechos reservados.",
 	},
 
 	card_headers: {
 		works: "Trabajos",
 		studies: "Estudios",
 		other_studies: "Información adicional",
-		articles: "Experiencia Laboral"
+		articles: "Experiencia Laboral",
 	},
 
 	socials_content: {
 		github: "Proyectos GitHub",
-		linkedin: "Perfil Profesional en LinkedIn"
+		linkedin: "Perfil Profesional en LinkedIn",
 	},
 
 	main: {
 		title: "Francisco Javier Migueles - Portfolio",
 		name: "Francisco Javier Migueles Dominguez",
 		email: "miguelesdominguez@gmail.com",
-		logo: "../logo.png",
+		logo: "../giblifoto.ico",
 	},
 
 	socials: {
 		github: "https://github.com/xiscomigueles",
-		linkedin: "https://www.linkedin.com/in/francisco-javier-migueles-dominguez-911526258/",
+		linkedin:
+			"https://www.linkedin.com/in/francisco-javier-migueles-dominguez-911526258/",
 		github_uni: "https://github.com/Framigdom",
 	},
 
@@ -48,33 +50,29 @@ const INFO = {
 	studies: [
 		{
 			title: "Oracle Certified Professional: Java SE 17",
-			institution:
-				"Oracle University",
+			institution: "Oracle University",
 			timeframe: "En proceso...",
-			logo: "../Oracle.png",			
+			logo: "../Oracle.png",
 		},
 		{
 			title: "Ingeniería del Software - Ingeniería Informática",
-			institution:
-				"Universidad de Sevilla",
+			institution: "Universidad de Sevilla",
 			timeframe: "Septiembre 2019 - Julio 2023",
-			logo: "../logo_us.png",			
+			logo: "../logo_us.png",
 		},
 	],
 	other_studies: [
 		{
 			title: "B1 Inglés",
-			institution:
-				"Cambridge",
+			institution: "Cambridge",
 			timeframe: "Julio 2018",
-			logo: "../cambridge.png",			
+			logo: "../cambridge.png",
 		},
 		{
 			title: "Carne de conducir B",
-			institution:
-				"DGT",
+			institution: "DGT",
 			timeframe: "Marzo 2023",
-			logo: "../dgt.png",			
+			logo: "../dgt.png",
 		},
 	],
 
@@ -85,22 +83,24 @@ const INFO = {
 	// 			"svsdvsddfvsd",
 	// 		timeframe: "svsdfvsdfvfsd",
 	// 		url: "vfvfsdvsvsdfv",
-	// 		logo: "",			
+	// 		logo: "",
 	// 	},
 	// ],
 
 	contact_header: {
 		header: "¿Trabajamos juntos?",
-		line_one:"Gracias por visitar mi portfolio. Si tienes alguna pregunta, sugerencia o simplemente quieres charlar sobre tecnología, videojuegos o cualquier otro tema, no dudes en contactarme por email.",
-		line_two:"Te dejo por aqui mi CV en PDF y mi perfil de Linkedin. ¡Espero saber de ti pronto!"
+		line_one:
+			"Gracias por visitar mi portfolio. Si tienes alguna pregunta, sugerencia o simplemente quieres charlar sobre tecnología, videojuegos o cualquier otro tema, no dudes en contactarme por email.",
+		line_two:
+			"Te dejo por aqui mi CV en PDF y mi perfil de Linkedin. ¡Espero saber de ti pronto!",
 	},
-
 
 	projects_header: {
 		header: "Mis Proyectos Destacados",
-		description:"A lo largo de mi trayectoria como desarrollador, he llevado a cabo diversos proyectos personales y colaborativos, combinando originalidad, creatividad y un enfoque práctico en la resolución de problemas reales. Desde aplicaciones web hasta pequeños videojuegos, cada proyecto ha sido una oportunidad para aprender, experimentar y crecer profesionalmente, contribuyendo de forma decisiva a mi evolución como desarrollador."
+		description:
+			"A lo largo de mi trayectoria como desarrollador, he llevado a cabo diversos proyectos personales y colaborativos, combinando originalidad, creatividad y un enfoque práctico en la resolución de problemas reales. Desde aplicaciones web hasta pequeños videojuegos, cada proyecto ha sido una oportunidad para aprender, experimentar y crecer profesionalmente, contribuyendo de forma decisiva a mi evolución como desarrollador.",
 	},
-
+	
 	projects: [
 		{
 			title: "FoodCheck",
@@ -145,15 +145,29 @@ const INFO = {
 			linkText: "Ver en GitHub",
 			link: "https://github.com/gii-is-DP1/dp1-2021-2022-l8-5",
 		},
-
-
 		{
-			title: "",
+			title: "Feria CBD",
 			description:
-				"",
-				logo: "",
-				linkText: "Ver en GitHub",
-			link: "",
+				"Proyecto para la asignatura de Complemento de Base de Datos del grado de Ingeniería del Software, donde se realizó una aplicacion web para buscar y localizar casetas de la feria de Sevilla. Proyecto colaborativo desarrollado en Python con Django y usando MongoDB.",
+			logo: "./MongoDB.png",
+			linkText: "Ver en GitHub",
+			link: "https://github.com/DiegoRuizGil/Feria_CBD",
+		},
+		{
+			title: "Gus Gus",
+			description:
+				"Desarrollo de un videojuego 2D como proyecto final de grado, implementado en Unity con C# y ejecutable en escritorio. El juego se basa en laberintos generados aleatoriamente, donde el jugador debe superar niveles enfrentando enemigos y en el menor tiempo posible.",
+			logo: "./gusgus.png",
+			linkText: "Ver en GitHub",
+			link: "https://github.com/TFG-Framigdom/GusGus",
+		},
+		{
+			title: "Let me in Piss",
+			description:
+				"Videojuego 2D desarrollado durante la Málaga Jam 2024, con la temática Hazme reír. El juego consiste en alcanzar un destino superando una serie de mini-juegos cómicos a lo largo del recorrido. Proyecto colaborativo creado en Unity con C#.",
+			logo: "./itchio.png",
+			linkText: "Ver en Itchio",
+			link: "https://diegorg64.itch.io/let-me-in-piss",
 		},
 	],
 };

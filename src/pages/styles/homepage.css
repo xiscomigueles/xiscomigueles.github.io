@@ -80,7 +80,6 @@
 
 .homepage-articles {
 	flex-basis: 900px;
-	padding-top: 30px;
 	margin-left: -30px;
 }
 
@@ -98,6 +97,22 @@
 	flex-basis: 600px;
 	padding-top: 30px;
 }
+
+.view-all-projects-button {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.view-all-projects-button a {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.view-all-projects-button a:hover {
+	text-decoration: underline;
+}
+
 
 @media (max-width: 1024px) {
 	.homepage-first-area {

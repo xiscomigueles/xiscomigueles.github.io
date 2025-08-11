@@ -2,6 +2,7 @@ import React from "react";
 
 function article_1() {
 	return {
+		logo: "../cambridge.png",
 		date: "7 May 2023",
 		title: "The Benefits of Cloud Computing",
 		description:
@@ -41,6 +42,7 @@ function article_1() {
 
 function article_2() {
 	return {
+		logo: "../cambridge.png",
 		date: "7 May 2023",
 		title: "Artificial Intelligence in Healthcare",
 		description:
