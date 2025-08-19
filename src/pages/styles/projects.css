@@ -31,3 +31,16 @@
 		width: calc(100% / 2);
 	}
 }
+
+/* Alinear cursos al mismo ancho que proyectos */
+.courses-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px; /* igual que el ancho visual de proyectos */
+	padding-top: 40px;
+	padding-bottom: 20px;
+}

@@ -10,6 +10,7 @@ import SEO from "../data/seo";
 import LanguageContext from "../LanguageContext";
 import translations from "../data/translations";
 import "./styles/projects.css";
+import Courses from "../components/courses/Courses";
 
 const Projects = () => {
 	useEffect(() => {
@@ -22,7 +23,6 @@ const Projects = () => {
 	useEffect(() => {
 		setINFO(translations[language]);
 	}, [language]);
-
 
 	const currentSEO = SEO.find((item) => item.page === "projects");
 
@@ -56,6 +56,10 @@ const Projects = () => {
 
 						<div className="projects-list">
 							<AllProjects />
+						</div>
+						{/* Cursos section */}
+						<div className="courses-wrapper">
+							<Courses />
 						</div>
 					</div>
 					<div className="page-footer">

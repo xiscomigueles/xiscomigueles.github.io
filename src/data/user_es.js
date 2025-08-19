@@ -2,7 +2,7 @@ const INFO = {
 	nav_bar: {
 		home: "Inicio",
 		about: "Sobre mi",
-		projects: "Proyectos",
+		projects: "Logros",
 		contact: "Contacto",
 		MoreProjects: "Ver todos los proyectos -->",
 		based_on:
