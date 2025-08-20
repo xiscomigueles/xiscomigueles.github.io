@@ -15,7 +15,6 @@ import Project from "../components/projects/project";
 import LanguageContext from "../LanguageContext";
 import translations from "../data/translations";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import Card from "../components/common/card";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
@@ -194,37 +193,19 @@ const Homepage = () => {
 								bodyStyle={{ paddingTop: 20 }}
 								body={
 									<div className="homepage-articles">
-										{myArticles.map((article, index) => {
-											const path = `/article/${
-												index + 1
-											}`;
-											return (
-												<Link
-													to={path}
-													key={(index + 1).toString()}
-													style={{ textDecoration: "none", color: "inherit" }}
-												>
-													<div className="homepage-article">
-														<Article
-															date={
-																article().date
-															}
-															title={
-																article().title
-															}
-															description={
-																article()
-																	.description
-															}
-															link={path}
-															logo={
-																article().logo
-															}
-														/>
-													</div>
-												</Link>
-											);
-										})}
+										{INFO.articles?.list?.map((article, index) => (
+											<Link to={`/article/${index + 1}`} key={index} style={{ textDecoration: "none", color: "inherit" }}>
+												<Article
+													date={article.date}
+													title={article.title}
+													description={article.description}
+													link={`/article/${index + 1}`}
+													logo={article.logo}
+												/>
+											</Link>
+										))}
+
+
 									</div>
 								}
 							/>

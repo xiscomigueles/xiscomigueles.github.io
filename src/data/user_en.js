@@ -1,3 +1,5 @@
+import React from "react";
+
 const INFO = {
 	nav_bar: {
 		home: "Home",
@@ -158,6 +160,167 @@ const INFO = {
 			link: "https://diegorg64.itch.io/let-me-in-piss",
 		},
 	],
+	courses_header: {
+		title: "Completed Courses",
+	},
+	courses: [
+		{ name: "SOLID Design Patterns", diploma: "./diplomas/SOLID.png" },
+		{ name: "Docker Containers", diploma: "./diplomas/Docker.png" },
+		{ name: "Jakarta EE", diploma: "./diplomas/JakartaEE.png" },
+		{ name: "Helm", diploma: "./diplomas/Helm.png" },
+		{ name: "Istio", diploma: "./diplomas/Istio.png" },
+		{ name: "Kubernetes", diploma: "./diplomas/Kubernetes.png" },
+	],
+	articles: {
+		title: "Professional Experience",
+		readButton: "Read More",
+		list: [
+			{
+				logo: "../grupoSolutia.png",
+				date: "11/09/2023 - Present",
+				title: "Senior Developer - Grupo Solutia",
+				description:
+					"Full Stack Developer with experience in SQL, Java, and front-end development with Web Components (Lit + Vite). Contributed to SAS and Mapfre projects under agile methodologies.",
+				keywords: [
+					"Grupo Solutia",
+					"Software Development",
+					"Microservices",
+					"Full Stack Developer",
+					"DDD",
+					"Spring Boot",
+					"Lit",
+					"Vite",
+					"Scrum",
+					"JSF",
+					"TypeScript",
+					"JavaScript",
+					"Java 11",
+					"Java 21",
+				],
+				body: (
+					<React.Fragment>
+						<h2>Software Developer / Analyst</h2>
+						<p>
+							During my time at <b>Grupo Solutia</b>, I participated in
+							large-scale projects such as <b>SAS Vaccination System</b> and
+							<b> Mapfre</b>, working both on client and server side while also
+							collaborating in analysis tasks.
+						</p>
+
+						<h3>Continuous Learning</h3>
+						<p>
+							I specialized in <b>design patterns</b>, <b>Docker containers</b>,
+							<b> Helm</b>, and modern architectures.
+						</p>
+
+						<h3>Vaccines Project (SAS)</h3>
+						<ul>
+							<li>
+								Maintenance and evolution of a <b>legacy system</b>, working full
+								stack with <b>JSF</b> and <b>JavaScript</b> on the front, and
+								<b> Java 11</b> with <b>Weblogic Oracle</b> on the backend.
+							</li>
+							<li>
+								Implemented new features, resolved incidents, and handled ticket
+								management.
+							</li>
+							<li>
+								Contributed to the <b>migration to microservices</b>, applying
+								<b> DDD (Domain-Driven Design)</b>, responsibility separation,
+								and domain diagrams.
+							</li>
+							<li>
+								During the technological transformation, the backend evolved to
+								<b> Java 21</b> and the front end to <b>Vite + Lit</b> with
+								<b> TypeScript + Web Components</b>, expanding my expertise with
+								modern stacks.
+							</li>
+						</ul>
+
+						<h3>Mapfre Project</h3>
+						<ul>
+							<li>
+								Backend development using <b>Spring</b> together with the
+								<b> pui9</b> framework from Prodevelop, with <b>Java 21</b> and
+								<b> PostgreSQL</b>.
+							</li>
+							<li>
+								Implemented <b>user stories</b> under <b>Scrum</b>, including
+								effort estimation and database relationship modeling.
+							</li>
+							<li>Frontend integration with <b>Vue.js</b>.</li>
+						</ul>
+
+						<h3>Impact</h3>
+						<p>
+							I strengthened my profile as a <b>full stack developer</b>, working
+							from <b>legacy environments</b> with <b>Java 11</b> and <b>JSF</b> to
+							modern architectures with <b>Java 21</b> and <b>Web Components</b>,
+							applying <b>DDD</b> best practices and agile methodologies to deliver
+							scalable, high-quality solutions.
+						</p>
+					</React.Fragment>
+				),
+			},
+			{
+				logo: "../nttdata.png",
+				date: "03/02/2023 - 07/01/2023",
+				title: "Intern Developer - NTT DATA",
+				description:
+					"Programming internship at NTT DATA, developing data analysis visualizations in the SAE sector.",
+				keywords: [
+					"NTT DATA",
+					"Data Analysis",
+					"ETL",
+					"Dashboards",
+					"Python",
+					"JavaScript",
+					"SQL",
+					"Pentaho",
+				],
+				body: (
+					<React.Fragment>
+						<p>
+							During my time at <b>NTT DATA</b>, I worked on designing and
+							developing solutions focused on <b>data analysis</b> in the
+							<b> SAE sector</b>, using tools such as <b>Pentaho (PDI)</b>,
+							<b> SQL</b>, <b>Visual Studio</b>, <b>Python</b>, and
+							<b> JavaScript</b>.
+						</p>
+
+						<h3>Responsibilities and Achievements</h3>
+						<ul>
+							<li>
+								<b>Designed analytical models</b> and custom processes for data
+								exploitation.
+							</li>
+							<li>
+								<b>Developed and integrated ETL</b> processes to enable data
+								transformation and loading.
+							</li>
+							<li>
+								<b>Implemented dashboards</b> and interactive visualizations to
+								interpret complex datasets.
+							</li>
+							<li>
+								<b>Optimized queries and processing</b> to improve efficiency.
+							</li>
+							<li>
+								<b>Collaborated under agile methodologies</b> and supported the
+								development team.
+							</li>
+						</ul>
+
+						<p className="text-sm text-gray-500 mt-4">
+							<b>Technologies & Tools:</b> Oracle · Pentaho (PDI) · Visual Studio
+							· JavaScript · Python
+						</p>
+					</React.Fragment>
+				),
+			},
+		],
+	},
+
 };
 
 export default INFO;

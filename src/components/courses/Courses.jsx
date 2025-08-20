@@ -1,41 +1,18 @@
-import React, { useState } from "react";
-import "./courses.css"; // estilos aparte para mantener limpio
+import React, { useState, useContext } from "react";
+import LanguageContext from "../../LanguageContext";
+import translations from "../../data/translations";
+import "./courses.css";
 
 const Courses = () => {
 	const [selectedCourse, setSelectedCourse] = useState(null);
-
-	const courses = [
-		{
-			name: "Patrones de diseño SOLID",
-			diploma: "./diplomas/SOLID.png",
-		},
-		{
-			name: "Contenedores Docker",
-			diploma: "./diplomas/Docker.png",
-		},
-		{
-			name: "Jakarta EE",
-			diploma: "./diplomas/JakartaEE.png",
-		},
-		{
-			name: "Helm",
-			diploma: "./diplomas/Helm.png",
-		},
-		{
-			name: "Istio",
-			diploma: "./diplomas/Istio.png",
-		},
-		{
-			name: "Kubernetes",
-			diploma: "./diplomas/Kubernetes.png",
-		},
-	];
+	const { language } = useContext(LanguageContext);
+	const INFO = translations[language];
 
 	return (
 		<div className="courses-container">
-			<h2 className="courses-title">Cursos realizados</h2>
+			<h2 className="courses-title">{INFO.courses_header.title}</h2>
 			<div className="courses-list">
-				{courses.map((course, index) => (
+				{INFO.courses.map((course, index) => (
 					<div
 						key={index}
 						className="course-card"
@@ -53,7 +30,7 @@ const Courses = () => {
 				>
 					<div
 						className="modal-content"
-						onClick={(e) => e.stopPropagation()} // evitar cierre si clicas dentro
+						onClick={(e) => e.stopPropagation()}
 					>
 						<span
 							className="modal-close"

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
@@ -7,78 +7,86 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 
-import INFO from "../data/user";
-import myArticles from "../data/articles";
+import LanguageContext from "../LanguageContext";
+import translations from "../data/translations";
+import INFO from "../data/user"; // Para tu título principal y SEO general
 
 import "./styles/readArticle.css";
 
 let ArticleStyle = styled.div``;
 
 const ReadArticle = () => {
-	const navigate = useNavigate();
-	let { slug } = useParams();
+  const navigate = useNavigate();
+  const { slug } = useParams();
 
-	const article = myArticles[slug - 1];
+  // Obtener idioma actual
+  const { language } = useContext(LanguageContext);
+  const INFO_LANGUAGE = translations[language];
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, [article]);
+  // Obtener artículo correspondiente
+  const article = INFO_LANGUAGE.articles.list[slug - 1];
 
-	ArticleStyle = styled.div`
-		${article().style}
-	`;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [article]);
 
-	return (
-		<React.Fragment>
-			<Helmet>
-				<title>{`${article().title} | ${INFO.main.title}`}</title>
-				<meta name="description" content={article().description} />
-				<meta name="keywords" content={article().keywords.join(", ")} />
-			</Helmet>
+  // Aplicar estilos dinámicos
+  ArticleStyle = styled.div`
+    ${article.style}
+  `;
 
-			<div className="page-content">
-				<NavBar />
+  if (!article) {
+    return <div>Article not found</div>;
+  }
 
-				<div className="content-wrapper">
-					<div className="read-article-logo-container">
-						<div className="read-article-logo">
-							<Logo width={46} />
-						</div>
-					</div>
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>{`${article.title} | ${INFO.main.title}`}</title>
+        <meta name="description" content={article.description} />
+        <meta name="keywords" content={article.keywords.join(", ")} />
+      </Helmet>
 
-					<div className="read-article-container">
-						<div className="read-article-back">
-							<img
-								src="../back-button.png"
-								alt="back"
-								className="read-article-back-button"
-								onClick={() => navigate(-1)}
-							/>
-						</div>
+      <div className="page-content">
+        <NavBar />
 
-						<div className="read-article-wrapper">
-							<div className="read-article-date-container">
-								<div className="read-article-date">
-									{article().date}
-								</div>
-							</div>
+        <div className="content-wrapper">
+          <div className="read-article-logo-container">
+            <div className="read-article-logo">
+              <Logo width={46} />
+            </div>
+          </div>
 
-							<div className="title read-article-title">
-								{article().title}
-							</div>
+          <div className="read-article-container">
+            <div className="read-article-back">
+              <img
+                src="../back-button.png"
+                alt="back"
+                className="read-article-back-button"
+                onClick={() => navigate(-1)}
+              />
+            </div>
 
-							<div className="read-article-body">
-								<ArticleStyle>{article().body}</ArticleStyle>
-							</div>
-						</div>
-					</div>
-					<div className="page-footer">
-						<Footer />
-					</div>
-				</div>
-			</div>
-		</React.Fragment>
-	);
+            <div className="read-article-wrapper">
+              <div className="read-article-date-container">
+                <div className="read-article-date">{article.date}</div>
+              </div>
+
+              <div className="title read-article-title">{article.title}</div>
+
+              <div className="read-article-body">
+                <ArticleStyle>{article.body}</ArticleStyle>
+              </div>
+            </div>
+          </div>
+
+          <div className="page-footer">
+            <Footer />
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default ReadArticle;

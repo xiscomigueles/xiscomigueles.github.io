@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+import LanguageContext from "../../LanguageContext";
+import translations from "../../data/translations"; 
 import "./styles/article.css";
 
 const Article = (props) => {
 	const { title, description, date, link, logo } = props;
+	// Obtener idioma actual
+  const { language } = useContext(LanguageContext);
+  const INFO = translations[language];
 
 	return (
 		<React.Fragment>
@@ -32,7 +37,7 @@ const Article = (props) => {
 					</div>
 					<div className="homepage-article-link">
 						<Link to={link}>
-							Read article{" "}
+							{INFO.articles.readButton}{" "}
 							<FontAwesomeIcon
 								style={{ fontSize: "10px" }}
 								icon={faChevronRight}
