@@ -38,7 +38,7 @@ const INFO = {
 	homepage: {
 		title: "Ingeniero de Software y desarrollador web full-stack, especializado en Java.",
 		description:
-			"Soy desarrollador de software, cuento con una sólida experiencia como desarrollador backend en Java y como desarrollador frontend con Node.js. Además, tengo conocimientos en tecnologías como JavaScript, SQL, PL/SQL, contenedores Docker, Unity (C#), Godot, y Python, entre otras. Me motiva aprender constantemente, seguir buenas prácticas de desarrollo, asumir nuevos retos y, especialmente, me apasiona la industria de los videojuegos.",
+			"Soy desarrollador de software, cuento con una sólida experiencia como desarrollador backend en Java y como desarrollador frontend con Node.js. Además, tengo conocimientos en tecnologías como TypeScript, SQL, PL/SQL, contenedores Docker, Unity (C#), Godot, y Python, entre otras. Me motiva aprender constantemente, seguir buenas prácticas de desarrollo, asumir nuevos retos y, especialmente, me apasiona la industria de los videojuegos.",
 	},
 
 	about: {

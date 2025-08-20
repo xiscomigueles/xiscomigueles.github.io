@@ -18,6 +18,7 @@ function article_1() {
 			"Vite",
 			"Scrum",
 			"JSF",
+			"TypeScript",
 			"JavaScript",
 			"Java 11",
 			"Java 21"
@@ -34,7 +35,7 @@ function article_1() {
 
 				<h3>Formación continua</h3>
 				<p>
-					Me especialicé en <b>patrones de diseño</b>, <b>contenedores Docker</b>, <b>Helm</b>, <b>JavaScript</b> y arquitecturas modernas.
+					Me especialicé en <b>patrones de diseño</b>, <b>contenedores Docker</b>, <b>Helm</b> y arquitecturas modernas.
 				</p>
 
 				<h3>Proyecto Vacunas (SAS)</h3>
@@ -52,7 +53,7 @@ function article_1() {
 					</li>
 					<li>
 						En la transformación tecnológica, el backend evolucionó a <b>Java 21</b> y el front a 
-						<b>Vite + Lit</b> con <b>Web Components</b>, ampliando mi experiencia en entornos modernos.
+						<b>Vite + Lit</b> usando <b>TypeScript con Web Components</b>, ampliando mi experiencia en entornos modernos.
 					</li>
 				</ul>
 
