@@ -192,7 +192,7 @@ const INFO = {
 			{
 				logo: "../grupoSolutia.png",
 				date: "09/11/2023 - Actualidad",
-				title: "Programador Senior - Grupo Solutia",
+				title: "Programador Junior - Grupo Solutia",
 				description:
 					"Programador Full Stack con experiencia en SQL, Java y desarrollo front-end con Web Components (Lit + Vite), participando en proyectos para el SAS y Mapfre bajo metodologías ágiles.",
 				keywords: [
@@ -213,7 +213,6 @@ const INFO = {
 				],
 				body: (
 					<React.Fragment>
-						<h2>Software Developer / Analyst</h2>
 						<p>
 							Durante mi etapa en <b>Grupo Solutia</b> participé en proyectos de
 							gran impacto como <b>Vacunas del SAS</b> y <b>Mapfre</b>, desarrollando

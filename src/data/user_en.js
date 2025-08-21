@@ -178,7 +178,7 @@ const INFO = {
 			{
 				logo: "../grupoSolutia.png",
 				date: "11/09/2023 - Present",
-				title: "Senior Developer - Grupo Solutia",
+				title: "Junior Developer - Grupo Solutia",
 				description:
 					"Full Stack Developer with experience in SQL, Java, and front-end development with Web Components (Lit + Vite). Contributed to SAS and Mapfre projects under agile methodologies.",
 				keywords: [
@@ -199,7 +199,6 @@ const INFO = {
 				],
 				body: (
 					<React.Fragment>
-						<h2>Software Developer / Analyst</h2>
 						<p>
 							During my time at <b>Grupo Solutia</b>, I participated in
 							large-scale projects such as <b>SAS Vaccination System</b> and

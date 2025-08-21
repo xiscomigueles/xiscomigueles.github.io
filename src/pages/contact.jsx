@@ -69,7 +69,7 @@ const Contact = () => {
 					</div>
 					<div className="cv-viewer">
 						<iframe
-							src="/CVMigueles.pdf"
+							src={language === "es" ? "./CV/CV_FranciscoJMigueles_ES.pdf" : "./CV/CV_FranciscoJMigueles_EN.pdf"}
 							width="100%"
 							height="600px"
 							style={{
@@ -79,6 +79,7 @@ const Contact = () => {
 							title="CV Viewer"
 						></iframe>
 					</div>
+
 
 					<div className="page-footer">
 						<Footer />
