@@ -26,7 +26,7 @@ const INFO = {
 		title: "Francisco Javier Migueles - Portfolio",
 		name: "Francisco Javier Migueles Dominguez",
 		email: "miguelesdominguez@gmail.com",
-		logo: "../giblifoto.ico",
+		logo: "FotitoGibli.png",
 	},
 
 	socials: {
