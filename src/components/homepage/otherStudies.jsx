@@ -16,9 +16,9 @@ const OtherStudies = () => {
 	const [INFO, setINFO] = useState(translations[language]);
 
 
-		useEffect(() => {
-			setINFO(translations[language]); 
-		}, [language]); 
+	useEffect(() => {
+		setINFO(translations[language]);
+	}, [language]);
 
 
 	return (
@@ -29,22 +29,23 @@ const OtherStudies = () => {
 				body={
 					<div className="other-studies-body">
 						{INFO.other_studies && INFO.other_studies.map(
-							(other_studies,id) => (
-								<div className="other-study">
-							<img
-								height={30}
-								src={other_studies.logo}
-								alt={`${id}-study`}
-								className="other-study-image"
-							/>
-							<div className="other-study-title">{other_studies.title}</div>
-							<div className="other-study-subtitle">
-							{other_studies.institution}
-							</div>
-							<div className="other-study-duration">{other_studies.timeframe}</div>
-						</div>
+							(other_study, index) => (
+								<div className="other-study" key={other_study.id || index}>
+									<img
+										height={30}
+										src={other_study.logo}
+										alt={`${other_study.title}-study`}
+										className="other-study-image"
+									/>
+									<div className="other-study-title">{other_study.title}</div>
+									<div className="other-study-subtitle">
+										{other_study.institution}
+									</div>
+									<div className="other-study-duration">{other_study.timeframe}</div>
+								</div>
 							)
 						)}
+
 					</div>
 				}
 			/>
