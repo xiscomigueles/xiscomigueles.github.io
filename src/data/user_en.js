@@ -26,7 +26,7 @@ const INFO = {
 		title: "Francisco Javier Migueles - Portfolio",
 		name: "Francisco Javier Migueles Dominguez",
 		email: "miguelesdominguez@gmail.com",
-		logo: "FotitoGibli.png",
+		logo: "/FotitoGibli.png",
 	},
 
 	socials: {
@@ -177,6 +177,7 @@ const INFO = {
 		list: [
 			{
 				logo: "../grupoSolutia.png",
+				companyLink: "https://www.linkedin.com/company/solutia-innovaworld-technologies/",
 				date: "11/09/2023 - Present",
 				title: "Junior Developer - Grupo Solutia",
 				description:
@@ -263,6 +264,7 @@ const INFO = {
 			},
 			{
 				logo: "../nttdata.png",
+				companyLink: "https://www.linkedin.com/company/nttdata/",
 				date: "03/02/2023 - 07/01/2023",
 				title: "Intern Developer - NTT DATA",
 				description:

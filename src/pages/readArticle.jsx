@@ -72,7 +72,24 @@ const ReadArticle = () => {
                 <div className="read-article-date">{article.date}</div>
               </div>
 
-              <div className="title read-article-title">{article.title}</div>
+              <div className="read-article-header">
+                {article.logo && (
+                  <a
+                    href={article.companyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="read-article-logo-link"
+                  >
+                    <img
+                      src={article.logo}
+                      alt={`${article.title} logo`}
+                      className="read-article-article-logo"
+                    />
+                  </a>
+                )}
+                <div className="title read-article-title">{article.title}</div>
+              </div>
+
 
               <div className="read-article-body">
                 <ArticleStyle>{article.body}</ArticleStyle>

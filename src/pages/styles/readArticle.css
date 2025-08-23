@@ -66,3 +66,32 @@
 	font-family: system-ui;
 	color: #52525b;
 }
+
+.read-article-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5em;
+}
+
+.read-article-logo-link {
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.read-article-article-logo {
+  width: 64px;        /* un poco más grande para detalle */
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover */
+.read-article-logo-link:hover .read-article-article-logo {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
