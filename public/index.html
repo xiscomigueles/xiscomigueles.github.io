@@ -8,13 +8,19 @@
 	<meta name="theme-color" content="#000000" />
 	<title>Reactfolio</title>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYDC5C1HSH"></script>
+	<!-- Google Analytics solo en producción -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+		if (window.location.hostname !== "localhost") {
+			var s1 = document.createElement("script");
+			s1.async = true;
+			s1.src = "https://www.googletagmanager.com/gtag/js?id=G-JYDC5C1HSH";
+			document.head.appendChild(s1);
 
-		gtag('config', 'G-JYDC5C1HSH');
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-JYDC5C1HSH');
+		}
 	</script>
 </head>
 

@@ -1,44 +1,72 @@
-@import "../../../data/styles.css";
-
 .studies-body {
-	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 .study {
 	display: flex;
-	padding-bottom: 40px;
-	width: 400px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+	width: 100%;
+	max-width: 500px; /* más ancho para que no se vea apretado */
+	box-sizing: border-box;
 }
 
 .study-image {
-	height: 30px;
-	width: 30px;
+	height: 40px; /* un poco más grande */
+	width: 40px;
 	border-radius: 50%;
 	outline: 6px solid white;
 	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+	flex-shrink: 0;
+}
+
+.study-info {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	flex: 1 1 auto; /* permite crecer */
+	min-width: 0; /* importante para que no colapse el texto */
 }
 
 .study-title {
-	font-size: 15px;
+	font-size: clamp(1rem, 2.2vw, 1.2rem);
 	font-weight: 700;
-	padding-left: 20px;
-	margin-top: -3px;
 	color: var(--secondary-color);
+	overflow-wrap: break-word;
 }
 
 .study-subtitle {
-	position: absolute;
-	font-size: 12px;
+	font-size: clamp(0.9rem, 1.8vw, 1rem);
 	color: var(--secondary-color);
-	padding-top: 22px;
-	padding-left: 50px;
+	margin-top: 0.2rem;
 }
 
 .study-duration {
-	position: absolute;
-	width: 350px;
-	font-size: 12px;
-	padding-top: 20px;
-	text-align: right;
+	font-size: clamp(0.9rem, 1.8vw, 1rem);
 	color: var(--tertiary-color);
+	text-align: right;
+	white-space: nowrap;
+	margin-left: 1rem;
+	flex-shrink: 0; /* no se encoge */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+	.study {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.study-info {
+		margin-left: 0;
+		margin-top: 0.5rem;
+	}
+	.study-duration {
+		text-align: left;
+		margin-left: 0;
+		margin-top: 0.25rem;
+	}
 }

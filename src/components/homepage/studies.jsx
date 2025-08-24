@@ -8,19 +8,13 @@ import "./styles/studies.css";
 import LanguageContext from "../../LanguageContext";
 import translations from "../../data/translations";
 
-
-
 const Studies = () => {
-
 	const { language } = useContext(LanguageContext);
-
 	const [INFO, setINFO] = useState(translations[language]);
-
 
 	useEffect(() => {
 		setINFO(translations[language]);
 	}, [language]);
-
 
 	return (
 		<div className="studies">
@@ -29,20 +23,22 @@ const Studies = () => {
 				title={INFO.card_headers.studies}
 				body={
 					<div className="studies-body">
-						{INFO.studies && INFO.studies.map((study, index) => (
-							<div className="study" key={study.id || index}>
-								<img
-									height={30}
-									src={study.logo}
-									alt={`${study.title}-study`}
-									className="study-image"
-								/>
-								<div className="study-title">{study.title}</div>
-								<div className="study-subtitle">{study.institution}</div>
-								<div className="study-duration">{study.timeframe}</div>
-							</div>
-						))}
-
+						{INFO.studies &&
+							INFO.studies.map((study, index) => (
+								<div className="study" key={study.id || index}>
+									<img
+										height={30}
+										src={study.logo}
+										alt={`${study.title}-study`}
+										className="study-image"
+									/>
+									<div className="study-info">
+										<div className="study-title">{study.title}</div>
+										<div className="study-subtitle">{study.institution}</div>
+									</div>
+									<div className="study-duration">{study.timeframe}</div>
+								</div>
+							))}
 					</div>
 				}
 			/>
