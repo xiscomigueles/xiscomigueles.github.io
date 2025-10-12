@@ -193,7 +193,7 @@ const INFO = {
 				logo: "/grupoSolutia.png",
 				companyLink: "https://www.linkedin.com/company/solutia-innovaworld-technologies/",
 				date: "09/11/2023 - Actualidad",
-				title: "Programador Senior - Grupo Solutia",
+				title: "Desarrollador Full-Stack - Grupo Solutia",
 				description:
 					"Programador Full Stack con experiencia en SQL, Java y desarrollo front-end con Web Components (Lit + Vite), participando en proyectos para el SAS y Mapfre bajo metodologías ágiles.",
 				keywords: [

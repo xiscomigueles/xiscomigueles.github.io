@@ -179,7 +179,7 @@ const INFO = {
 				logo: "../grupoSolutia.png",
 				companyLink: "https://www.linkedin.com/company/solutia-innovaworld-technologies/",
 				date: "11/09/2023 - Present",
-				title: "Senior Developer - Grupo Solutia",
+				title: "Full-Stack Developer - Grupo Solutia",
 				description:
 					"Full Stack Developer with experience in SQL, Java, and front-end development with Web Components (Lit + Vite). Contributed to SAS and Mapfre projects under agile methodologies.",
 				keywords: [
