@@ -39,18 +39,18 @@ const INFO = {
 	homepage: {
 		title: "Software Engineer and Full-Stack Web Developer, specialized in Java.",
 		description:
-			"I am a software developer with solid experience as a backend developer in Java and frontend developer with Node.js. Additionally, I have knowledge of technologies such as TypeScript, SQL, PL/SQL, Docker containers, Unity (C#), Godot, and Python, among others. I am highly motivated to keep learning, follow best development practices, take on new challenges, and I am especially passionate about the video game industry.",
+			"I'm a software engineer with solid experience as a backend developer in Java and frontend developer with Node.js. Additionally, I have knowledge of technologies such as TypeScript, SQL, PL/SQL, Docker containers, Unity (C#), Godot, and Python, among others. I'm highly motivated to keep learning, follow best development practices, take on new challenges, and I'm especially passionate about the video game industry.",
 	},
 
 	about: {
 		title: "Francisco Javier Migueles - Code geek with a gamer’s soul.",
 		description:
-			"Throughout my academic career and professional experience, I have participated in various projects, both personal open-source projects available on my GitHub repository, as well as internal developments for the Andalusian Health Service (SAS) and Mapfre. These projects allowed me to gain strong expertise in Java, along with advanced knowledge in technologies such as TypeScript, Node.js, SQL, JSF, Docker containers, and more.\n On several occasions, I worked simultaneously on more than one project (for example, Vaccines and Mapfre), which helped me face a wide range of technical challenges in parallel, develop strong problem-solving skills, and successfully manage situations of high workload and stress.\n I have also developed skills in software design, design patterns, analysis and Domain-Driven Design (DDD) modeling, microservices development, and agile methodologies such as Scrum and Kanban.\n I am driven by continuous learning and growth, both professionally and personally, always applying good development practices. I consider myself disciplined, organized, and committed to punctuality and teamwork, qualities I deeply value in a professional environment. My main goals are to design efficient applications, specialize as a Java expert, and publish several video games on Steam.",
+			"Throughout my academic and professional career, I have participated in various projects, including open-source repositories on GitHub and internal developments for the Andalusian Health Service (SAS) and Mapfre. These experiences have allowed me to strengthen my expertise in Java and gain advanced knowledge in TypeScript, Node.js, SQL, JSF, and Docker, among other technologies.\n I have often worked on multiple projects simultaneously, tackling diverse technical challenges that enhanced my problem-solving skills, time management, and ability to perform under pressure. I have solid experience in software design and architecture, as well as in design patterns, DDD, microservices, and agile methodologies such as Scrum and Kanban. I'm passionate about continuous learning and the application of best development practices. \n In addition, I enjoy creating mini-games for game jams and aspire to publish my own video games on Steam in the future."
 	},
 
 	studies: [
 		{
-			title: "Oracle Certified Professional: Java SE 17",
+			title: "Oracle Certified Professional: Java SE 21",
 			institution: "Oracle University",
 			timeframe: "In progress...",
 			logo: "../Oracle.png",
@@ -159,6 +159,14 @@ const INFO = {
 			linkText: "View on Itchio",
 			link: "https://diegorg64.itch.io/let-me-in-piss",
 		},
+		{
+			title: "Static",
+			description:
+				"2D video game developed during the October Jam 2025, featuring a horror theme based on the concept “TV static.” It's a walking simulator where the player explores a mysterious house to uncover what really happened. A collaborative project created in Godot using GDScript.",
+			logo: "./itchio.png",
+			linkText: "Ver en Itchio",
+			link: "https://xiscomigueles.itch.io/staticjam",
+		}
 	],
 	courses_header: {
 		title: "Completed Courses",
@@ -209,8 +217,8 @@ const INFO = {
 
 						<h3>Continuous Learning</h3>
 						<p>
-							I specialized in <b>design patterns</b>, <b>Docker containers</b>,
-							<b> Helm</b>, and modern architectures.
+							I specialized in <b>design patterns</b>, with a strong focus on implementing the <b>Factory</b> and <b>Chain of Responsibility</b> patterns to achieve more modular, scalable, and maintainable code. 
+							I also have experience working with <b>Docker containers</b>, <b> Helm</b>, and modern architectures aimed at efficiency and automation.
 						</p>
 
 						<h3>Vaccines Project (SAS)</h3>

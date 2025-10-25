@@ -40,18 +40,18 @@ const INFO = {
 	homepage: {
 		title: "Ingeniero de Software y desarrollador web full-stack, especializado en Java.",
 		description:
-			"Soy desarrollador de software, cuento con una sólida experiencia como desarrollador backend en Java y como desarrollador frontend con Node.js. Además, tengo conocimientos en tecnologías como TypeScript, SQL, PL/SQL, contenedores Docker, Unity (C#), Godot, y Python, entre otras. Me motiva aprender constantemente, seguir buenas prácticas de desarrollo, asumir nuevos retos y, especialmente, me apasiona la industria de los videojuegos.",
+			"Soy ingeniero de software, cuento con una sólida experiencia como desarrollador backend en Java y como desarrollador frontend con Node.js. Además, tengo conocimientos en tecnologías como TypeScript, SQL, PL/SQL, contenedores Docker, Unity (C#), Godot, y Python, entre otras. Me motiva aprender constantemente, seguir buenas prácticas de desarrollo, asumir nuevos retos y, especialmente, me apasiona la industria de los videojuegos.",
 	},
 
 	about: {
 		title: "Francisco Javier Migueles - Friki del código con alma de gamer.",
 		description:
-			"A lo largo de mi carrera académica y experiencia profesional, he participado en diversos proyectos, tanto personales de código abierto disponibles en mi repositorio de GitHub, como en desarrollos internos no públicos para el Sistema Andaluz de Salud (SAS) y Mapfre. Estos proyectos me han permitido adquirir un dominio sólido de Java, así como un conocimiento avanzado en tecnologías como TypeScript, Node.js, SQL, JSF, contenedores Docker, entre otras. \n En varios momentos trabajé de forma simultánea en más de un proyecto (por ejemplo, Vacunas y Mapfre), lo que me permitió afrontar una gran variedad de retos técnicos en paralelo, desarrollar una alta capacidad de resolución de problemas y gestionar con éxito situaciones de elevada carga de trabajo y estrés. \n Además, he desarrollado competencias en diseño de software, patrones de diseño, análisis y modelado DDD (Domain-Driven Design), construcción de microservicios y metodologías ágiles como Scrum y Kanban. \n Me motiva el aprendizaje continuo y el crecimiento tanto profesional como personal, aplicando siempre buenas prácticas de desarrollo. Me considero una persona disciplinada, organizada y comprometida con la puntualidad y el trabajo en equipo, cualidades que valoro profundamente en el entorno profesional. Mis principales objetivos son diseñar aplicaciones eficientes, especializarme como experto en Java y publicar varios videojuegos en Steam.",
-	},
+		    "A lo largo de mi carrera académica y profesional he participado en proyectos tanto personales, incluidos repositorios de código abierto en GitHub, como desarrollos internos para el Sistema Andaluz de Salud (SAS) y Mapfre. Estas experiencias me han permitido consolidar mi dominio de Java y adquirir un conocimiento avanzado en TypeScript, Node.js, SQL, JSF y Docker, entre otras tecnologías.\n He trabajado simultáneamente en varios proyectos, afrontando distintos retos técnicos y fortaleciendo mis habilidades de resolución de problemas, gestión del tiempo y trabajo bajo presión. Cuento con experiencia en diseño y arquitectura de software, así como en patrones de diseño, DDD, microservicios y metodologías ágiles como Scrum y Kanban.\n Me apasiona el aprendizaje continuo y la aplicación de buenas prácticas en el desarrollo. Además, disfruto creando mini juegos en game jams y tengo el objetivo de publicar mis propios videojuegos en Steam en el futuro."
+		},
 
 	studies: [
 		{
-			title: "Oracle Certified Professional: Java SE 17",
+			title: "Oracle Certified Professional: Java SE 21",
 			institution: "Oracle University",
 			timeframe: "En proceso...",
 			logo: "../Oracle.png",
@@ -171,6 +171,14 @@ const INFO = {
 			linkText: "Ver en Itchio",
 			link: "https://diegorg64.itch.io/let-me-in-piss",
 		},
+		{
+			title: "Static",
+			description:
+				"Videojuego 2D desarrollado durante la October Jam 2025, con una temática de terror basada en el concepto “TV estática”. Se trata de un walking simulator en el que el jugador explora una misteriosa casa para descubrir qué ocurrió realmente. Proyecto colaborativo creado en Godot, utilizando GDScript",
+			logo: "./itchio.png",
+			linkText: "Ver en Itchio",
+			link: "https://xiscomigueles.itch.io/staticjam",
+		}
 	],
 	courses_header: {
 		title: "Cursos realizados",
@@ -222,8 +230,8 @@ const INFO = {
 
 						<h3>Formación continua</h3>
 						<p>
-							Me especialicé en <b>patrones de diseño</b>, <b>contenedores Docker</b>,
-							<b> Helm</b> y arquitecturas modernas.
+							Me especialicé en el uso de <b>patrones de diseño</b>, destacando la implementación de <b>Factory</b> y <b>Chain of Responsibility</b> para lograr un código más modular, escalable y fácil de mantener. 
+							Además, cuento con experiencia en el uso de <b>contenedores Docker</b>, <b> Helm</b> y en el desarrollo de arquitecturas modernas orientadas a la eficiencia y la automatización.
 						</p>
 
 						<h3>Proyecto Vacunas (SAS)</h3>
