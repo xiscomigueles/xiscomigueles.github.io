@@ -164,7 +164,7 @@ const INFO = {
 			description:
 				"2D video game developed during the October Jam 2025, featuring a horror theme based on the concept “TV static.” It's a walking simulator where the player explores a mysterious house to uncover what really happened. A collaborative project created in Godot using GDScript.",
 			logo: "./itchio.png",
-			linkText: "Ver en Itchio",
+			linkText: "View en Itchio",
 			link: "https://xiscomigueles.itch.io/staticjam",
 		}
 	],
